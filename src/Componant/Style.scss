@@ -1,0 +1,1266 @@
+:root{
+    --form-control-color:#0b2f90;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form-control {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    gap: 0.5em;
+  }
+  
+  .form-control:focus-within {
+    color: var(--form-control-color);
+  }
+  
+  input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin: 0;
+  
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+  
+    display: grid;
+    place-content: center;
+  }
+  
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  
+  input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  }
+.Yearly{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    background-color: aliceblue;
+    .tag{
+        background-color: #fccc08;
+        position: absolute;
+        top: 2px;
+        padding: 12px;
+        left: 21%;
+        border-radius: .5rem;
+    }
+    .sub_Yearly{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+        width: 85%;
+        background: #0b2f90;
+        z-index: 99;
+        border-radius: 2rem;
+        .Yearly_top{
+            background: #6053c9;
+            z-index: 9999;
+            border-radius: 2rem;
+            width: 100%;
+            height: 500px;
+            align-items: center;
+            ul{
+                display: flex;
+                .navlink{
+                    list-style: none;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 800;
+                    margin: 2rem 0 0 3rem;
+                    background-color: #0b2e9000;
+                    padding: 10px 20px;
+                    border-radius: 2rem;
+                    list-style: none;
+                    text-decoration: none !important;
+                    &:hover,&:active,&.active{
+                        background-color: #0b2f90;
+                        padding: 10px 20px;
+                        border-radius: 2rem;
+    
+                    }
+                }
+              li{
+                list-style: none;
+                color: white;
+                font-size: 20px;
+                font-weight: 800;
+                margin: 2rem 0 0 3rem;
+                background-color: #0b2e9000;
+                padding: 10px 20px;
+                border-radius: 2rem;
+                &:hover,&:active, &.active{
+                    background-color: #0b2f90;
+                    padding: 10px 20px;
+                    border-radius: 2rem;
+
+                }
+              }
+            }
+          .menu{
+            display: flex;
+           
+            .form{
+                left: 21%;
+                top:35%;
+                .selectForm {
+                    color: rgb(255, 255, 255);
+                    
+                    .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+                        color: rgb(255, 255, 255);
+                    }
+                    .MuiSelect-nativeInput .css-yf8vq0-MuiSelect-nativeInput{
+                        color: rgb(255, 255, 255);
+                    }
+                }
+              }
+           
+          }
+          .Yearly_data{
+            display: flex;
+            margin: 2rem;
+            color: white;
+            justify-content: space-around;
+            div{
+                p{
+                    padding: 10px;
+                }
+                h1{
+                    color: #fccc08;
+                    font-weight: 1000;
+                   }
+            }
+ 
+          }
+          .Course_heading{
+            display: flex;
+            justify-content: start;
+            color: white;
+            margin: 2rem 0 0rem 4.5rem;
+          }
+          .course_topic{
+            display: flex;
+            justify-content: space-around;
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: white;
+                margin: 0 2rem;
+                padding: 20px;
+                span{
+                    display: flex;
+                    justify-content: flex-start;
+                    color: #fccc08;
+                    font-weight: 800;
+                }
+                p{
+                   margin-right: 2.9rem;
+                }
+            }
+          }
+            
+        }
+        .Yearly_bottom{
+            display: flex;
+            color: white;
+            margin: 2rem;
+          justify-content: space-between;
+
+            div{
+                padding: 1rem;
+                small{
+                  background-color: white;
+                  border-radius: 5px;
+                  color: #0b2f90;
+                  padding: 2px 8px;
+                  font-weight: 800;
+                }
+                h3{
+                 span{
+                    color: #fccc08;
+                    font-weight: 600;
+                 }
+                }
+                p{
+                
+                }
+                .btn{
+                    background-color: #fccc08;
+                    padding: 15px 20px;
+                    border-radius: 1.5rem;
+                    width: 10rem;
+                    font-weight: 600;
+                    border: none;
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 2rem;
+            color: white;
+            font-weight: 500;
+        }
+        
+        }
+        
+}
+
+@media screen and (max-width: 576px) {
+    .Yearly{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 40px 0px;
+        background-color: aliceblue;
+        .tag{
+            background-color: #fccc08;
+            position: absolute;
+            top: 2px;
+            padding: 10px;
+            left: 10%;
+            border-radius: .5rem;
+            width: 80%;
+        }
+        .sub_Yearly{
+            display: flex;
+            width: 100%;
+            .Yearly_top{
+                width: 100%;
+                height: auto;
+                ul{
+                    display: flex;
+                    .navlink{
+                        font-size: 15px;
+                        font-weight: 800;
+                        margin: 1rem 0 0 1rem;
+                        background-color: #0b2e9000;
+                        padding: 10px 20px;
+                        &:hover{
+                            background-color: #0b2f90;
+                            padding: 10px 20px;
+                            border-radius: 2rem;
+        
+                        }
+                    }
+                    li{
+                        list-style: none;
+                        color: white;
+                        font-size: 12px;
+                        font-weight: 800;
+                        margin: 1rem 0 0 1rem;
+                        background-color: #0b2e9000;
+                        padding: 10px 15px;
+                        border-radius: 2rem;
+                        &:hover{
+                            background-color: #0b2f90;
+                            padding: 10px 20px;
+                            border-radius: 2rem;
+        
+                        }
+                      }
+                }
+                .menu{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .form{
+                        left: 1%;
+                        top:35%;
+                      }
+                   
+                  }
+                  .Yearly_data{
+                    display: grid;
+                    grid-template: 100px / auto auto auto;
+                    gap: 2px 5px;
+                    margin: 1rem;
+                   
+                    div{
+                        p{
+                            padding: 3px;
+                        }
+                        h1{
+                            color: #fccc08;
+                            font-weight: 1000;
+                           }
+                    }
+         
+                  }
+                  .Course_heading{
+                    margin: 2rem 0 1rem 2rem;
+                  }
+                  .course_topic{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    div{
+                        margin: 0 1rem;
+                        padding: 15px;
+                        
+                    }
+                  }
+
+            }
+            .Yearly_bottom{
+                display: flex;
+                color: white;
+                flex-direction: column;
+                margin: 2rem 0;
+            }
+            .bottom{
+                display: flex;
+                color: white;
+                flex-direction: column;
+                margin: 2rem 0;
+            h4{
+                margin: 1rem;
+            }
+            }
+        } 
+    }
+
+}
+
+@media (min-width: 577px) and (max-width: 991.98px) {
+    .Yearly{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 40px 0px;
+        background-color: aliceblue;
+        .tag{
+            background-color: #fccc08;
+            position: absolute;
+            top: 2px;
+            padding: 10px;
+            left: 10%;
+            border-radius: .5rem;
+            width: 50%;
+        }
+        .sub_Yearly{
+            display: flex;
+            width: 100%;
+            .Yearly_top{
+                width: 100%;
+                height: auto;
+                ul{
+                    display: flex;
+                    justify-content: start;
+                    .navlink{
+                        font-size: 15px;
+                        font-weight: 800;
+                        margin: 1rem 0 0 2rem;
+                        background-color: #0b2e9000;
+                        padding: 10px 20px;
+                        &:hover{
+                            background-color: #0b2f90;
+                            padding: 10px 20px;
+                            border-radius: 2rem;
+        
+                        }
+                    }
+                    li{
+                        list-style: none;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 800;
+                        margin: 1rem 0 0 2rem;
+                        background-color: #0b2e9000;
+                        padding: 10px 20px;
+                        border-radius: 2rem;
+                        &:hover{
+                            background-color: #0b2f90;
+                            padding: 10px 20px;
+                            border-radius: 2rem;
+        
+                        }
+                      }
+                }
+                .menu{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .form{
+                        left: -30%;
+                        top:35%;
+                      }
+                   
+                  }
+                  .Yearly_data{
+                    display: grid;
+                    grid-template: 120px 120px/1fr 1fr 1fr;
+                    gap: 2px 5px;
+                    margin: 1rem;
+                  }
+                  .Course_heading{
+                    margin: 1rem 0 1rem 3rem;
+                  }
+                  .course_topic{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    margin: 0 3rem;
+                    div{
+                        margin: 0 1rem;
+                        padding: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: start;  
+                    }
+                  }
+
+            }
+            .Yearly_bottom{
+                display: flex;
+                color: white;
+                flex-direction: column;
+                margin: 2rem 0;
+            }
+            .bottom{
+                display: flex;
+                color: white;
+                flex-direction: row;
+                margin: 2rem 0;
+            h4{
+                margin: 1rem;
+            }
+            }
+        } 
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+    .Yearly{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 40px 0px;
+        background-color: aliceblue;
+        .tag{
+            background-color: #fccc08;
+            position: absolute;
+            top: 2px;
+            padding: 12px;
+            left: 21%;
+            border-radius: .5rem;
+        }
+        .sub_Yearly{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: auto;
+            width: 85%;
+            background: #0b2f90;
+            z-index: 99;
+            border-radius: 2rem;
+            .Yearly_top{
+                background: #6053c9;
+                z-index: 9999;
+                border-radius: 2rem;
+                width: 100%;
+                height: 500px;
+                align-items: center;
+                ul{
+                    display: flex;
+                    .navlink{
+                        list-style: none;
+                        color: white;
+                        font-size: 17px;
+                        font-weight: 800;
+                        margin: 1rem 0 0 2rem;
+                        background-color: #0b2e9000;
+                        padding: 6px 12px;
+                        border-radius: 2rem;
+                        list-style: none;
+                        &:hover{
+                            background-color: #0b2f90;
+                            padding: 10px 20px;
+                            border-radius: 2rem;
+        
+                        }
+                    }
+                  li{
+                    list-style: none;
+                    color: white;
+                    font-size: 17px;
+                    font-weight: 800;
+                    margin: 1rem 0 0 2rem;
+                    background-color: #0b2e9000;
+                    padding: 10px 20px;
+                    border-radius: 2rem;
+                    &:hover{
+                        background-color: #0b2f90;
+                        padding: 10px 20px;
+                        border-radius: 2rem;
+    
+                    }
+                  }
+                }
+              .menu{
+                display: flex;
+    
+                .form{
+                    left: 21%;
+                    top:35%;
+                    .selectForm {
+                        color: rgb(255, 255, 255);
+                        
+                        .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+                            color: rgb(255, 255, 255);
+                        }
+                        .MuiSelect-nativeInput .css-yf8vq0-MuiSelect-nativeInput{
+                            color: rgb(255, 255, 255);
+                        }
+                    }
+                  }
+               
+              }
+              .Yearly_data{
+                display: flex;
+                margin: 2rem;
+                color: white;
+                justify-content: space-between;
+                div{
+                    p{
+                        padding: 10px;
+                    }
+                    h1{
+                        color: #fccc08;
+                        font-weight: 1000;
+                       }
+                }
+     
+              }
+              .Course_heading{
+                display: flex;
+                justify-content: start;
+                color: white;
+                margin: 2rem 0 0rem 3.5rem;
+              }
+              .course_topic{
+                display: flex;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: white;
+                    margin: 0 2rem;
+                    padding: 20px;
+                    span{
+                        display: flex;
+                        justify-content: flex-start;
+                        color: #fccc08;
+                        font-weight: 800;
+                    }
+                }
+              }
+                
+            }
+            .Yearly_bottom{
+                display: flex;
+                color: white;
+                margin: 2rem;
+              flex-direction: column;
+    
+                div{
+                    padding: 1rem;
+                    small{
+                      background-color: white;
+                      border-radius: 5px;
+                      color: #0b2f90;
+                      padding: 2px 8px;
+                      font-weight: 800;
+                    }
+                    h3{
+                     span{
+                        color: #fccc08;
+                        font-weight: 600;
+                     }
+                    }
+                    .btn{
+                        background-color: #fccc08;
+                        padding: 15px 20px;
+                        border-radius: 1.5rem;
+                        width: 10rem;
+                        font-weight: 600;
+                        border: none;
+                    }
+                }
+            }
+            .bottom{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin: 2rem;
+                color: white;
+                font-weight: 500;
+            }
+            
+            }
+            
+    }
+}
+
+// ===================Monthly===============
+.Monthly{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    background-color: aliceblue;
+    .tag{
+        background-color: #fccc08;
+        position: absolute;
+        top: 2px;
+        padding: 12px;
+        left: 21%;
+        border-radius: .5rem;
+    }
+    .sub_Monthly{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        // height: 800px;
+        width: 65%;
+        background: #0b2f90;
+        z-index: 99;
+        border-radius: 2rem;
+        .Monthly_top{
+            background: #6053c9;
+            z-index: 9999;
+            border-radius: 2rem;
+            width: 100%;
+            height: 600px;
+            align-items: center;
+            ul{
+                display: flex;
+                .navlink{
+                    list-style: none;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 800;
+                    margin: 2rem 0 0 3rem;
+                    background-color: #0b2e9000;
+                    padding: 10px 20px;
+                    border-radius: 2rem;
+                    text-decoration: none !important;
+                   &:active, &:hover,&.active{
+                        background-color: #0b2f90;
+                        padding: 10px 20px;
+                        border-radius: 2rem;
+                    }
+                }
+              li{
+                list-style: none;
+                color: white;
+                font-size: 20px;
+                font-weight: 800;
+                margin: 2rem 0 0 3rem;
+                background-color: #0b2e9000;
+                padding: 10px 20px;
+                border-radius: 2rem;
+              &:active,&.active,&:hover{
+                    background-color: #0b2f90;
+                    padding: 10px 20px;
+                    border-radius: 2rem;
+
+                }
+              }
+            }
+          .select{
+            display: flex;
+
+            .form{
+                left: 21%;
+                top:35%;
+                .selectForm {
+                    color: rgb(255, 255, 255);
+                    
+                    .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+                        color: rgb(255, 255, 255);
+                    }
+                    .MuiSelect-nativeInput .css-yf8vq0-MuiSelect-nativeInput{
+                        color: rgb(255, 255, 255);
+                    }
+                }
+              }
+           
+          }
+             
+        }
+        .Monthly_bottom{
+            display: flex;
+            color: white;
+            margin: 2rem;
+          justify-content: space-between;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: flex-start;
+                }
+                .btn{
+                    background-color: #fccc08;
+                    padding: 15px 20px;
+                    border-radius: 1.5rem;
+                    width: 10rem;
+                    font-weight: 600;
+                    border: none;
+                }
+            
+        }
+
+        .monthly_footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 2rem;
+            color: white;
+            font-weight: 500;
+        }
+        
+        }
+       .course{
+        margin: 2rem;
+        display: flex;
+        justify-content: space-around;
+        background: rgba(255, 255, 255, 0.192);
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        .radio{
+            display: flex;
+            .input_radio{
+                margin-right: 2rem;
+                
+            }
+            .month{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: flex-start;
+            }
+        }
+        .pay{
+            display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: flex-start;
+                color: #fccc08;
+                font-weight: 700;
+                s{
+                    font-size: 15px;
+                }
+                small{
+                    background-color: #6053c9;
+                    color: white;
+                    font-weight: 500;
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                }
+        }
+        .session{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start; 
+        }
+       }
+}
+
+@media screen and (max-width: 576px) {
+    .Monthly{
+        text-align: center;
+        display: flex;
+        // justify-content: start;
+        padding: 40px 0px;
+        background-color: aliceblue;
+        .tag{
+            background-color: #fccc08;
+            position: absolute;
+            top: 2px;
+            padding: 12px;
+            left: 8%;
+            border-radius: .5rem;
+        }
+        .sub_Monthly{
+            display: flex;
+            // justify-content: center;
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+            background: #0b2f90;
+            z-index: 99;
+            border-radius: 2rem;
+            .Monthly_top{
+                background: #6053c9;
+                z-index: 9999;
+                border-radius: 2rem;
+                width: 100%;
+                height: auto;
+                align-items: center;
+                ul{
+                    display: flex;
+                    .navlink{
+                        list-style: none;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 800;
+                        margin: 2rem 0 0 3rem;
+                        background-color: #0b2e9000;
+                        padding: 10px 20px;
+                        border-radius: 2rem;
+                        text-decoration: none !important;
+                        &:hover{
+                            background-color: #0b2f90;
+                            padding: 10px 20px;
+                            border-radius: 2rem;
+        
+                        }
+                    }
+                  li{
+                    list-style: none;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 800;
+                    margin: 2rem 0 0 3rem;
+                    background-color: #0b2e9000;
+                    padding: 10px 20px;
+                    border-radius: 2rem;
+                    &:hover{
+                        background-color: #0b2f90;
+                        padding: 10px 20px;
+                        border-radius: 2rem;
+    
+                    }
+                  }
+                }
+              .select{
+                display: flex;
+    
+                .form{
+                    left:50%;
+                    top:35%;
+                  }
+               
+              }
+                 
+            }
+            .Monthly_bottom{
+                display: flex;
+                color: white;
+                margin: 2rem;
+              justify-content: space-between;
+              flex-direction: column;
+              
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                    }
+                    .btn{
+                        background-color: #fccc08;
+                        padding: 15px 20px;
+                        border-radius: 1.5rem;
+                        width: 10rem;
+                        font-weight: 600;
+                        border: none;
+                    }
+                
+            }
+    
+            .monthly_footer{
+                display: flex;
+                flex-direction: column;
+                margin: 2rem;
+                color: white;
+                font-weight: 500;
+            }
+            
+            }
+           .course{
+            margin: 2rem;
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.192);
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: small;
+            .radio{
+                display: flex;
+                .month{
+                    h5{
+                        margin-right: 2rem; 
+                    }
+                }
+            }
+            .pay{
+                    color: #fccc08;
+                    font-weight: 700;
+                    s{
+                        font-size: 15px;
+                        margin-left: 3px;
+                    }
+                    small{
+                        background-color: #6053c9;
+                        color: white;
+                        font-weight: 500;
+                        padding: 2px 5px;
+                        border-radius: 5px;
+                        margin-left: 20px;
+                    }
+            }
+            .session{
+               h5{
+                margin-left: 13px;
+               }
+            }
+           }
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991.98px){
+    .Monthly{
+        text-align: center;
+        display: flex;
+        // justify-content: start;
+        padding: 40px 0px;
+        background-color: aliceblue;
+        .tag{
+            background-color: #fccc08;
+            position: absolute;
+            top: 2px;
+            padding: 12px;
+            left: 8%;
+            border-radius: .5rem;
+        }
+        .sub_Monthly{
+            display: flex;
+            // justify-content: center;
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+            background: #0b2f90;
+            z-index: 99;
+            border-radius: 2rem;
+            .Monthly_top{
+                background: #6053c9;
+                z-index: 9999;
+                border-radius: 2rem;
+                width: 100%;
+                height: auto;
+                align-items: center;
+                ul{
+                    display: flex;
+                    .navlink{
+                        list-style: none;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 800;
+                        margin: 2rem 0 0 3rem;
+                        background-color: #0b2e9000;
+                        padding: 10px 20px;
+                        border-radius: 2rem;
+                        &:hover{
+                            background-color: #0b2f90;
+                            padding: 10px 20px;
+                            border-radius: 2rem;
+        
+                        }
+                    }
+                  li{
+                    list-style: none;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 800;
+                    margin: 2rem 0 0 3rem;
+                    background-color: #0b2e9000;
+                    padding: 10px 20px;
+                    border-radius: 2rem;
+                    &:hover{
+                        background-color: #0b2f90;
+                        padding: 10px 20px;
+                        border-radius: 2rem;
+    
+                    }
+                  }
+                }
+              .select{
+                display: flex;
+    
+                .form{
+                    left:10%;
+                    top:35%;
+                  }
+               
+              }
+                 
+            }
+            .Monthly_bottom{
+                display: flex;
+                color: white;
+                margin: 2rem;
+              justify-content: space-between;
+              flex-direction: column;
+              
+                    div{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                    }
+                    .btn{
+                        background-color: #fccc08;
+                        padding: 15px 20px;
+                        border-radius: 1.5rem;
+                        width: 10rem;
+                        font-weight: 600;
+                        border: none;
+                    }
+                
+            }
+    
+            .monthly_footer{
+                display: flex;
+                flex-direction: column;
+                margin: 2rem;
+                color: white;
+                font-weight: 500;
+            }
+            
+            }
+           .course{
+            margin: 2rem;
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.192);
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: small;
+            .radio{
+                display: flex;
+                .month{
+                    h5{
+                        margin-right: 2rem; 
+                    }
+                }
+            }
+            .pay{
+                    color: #fccc08;
+                    font-weight: 700;
+                    s{
+                        font-size: 15px;
+                        margin-left: 3px;
+                    }
+                    small{
+                        background-color: #6053c9;
+                        color: white;
+                        font-weight: 500;
+                        padding: 2px 5px;
+                        border-radius: 5px;
+                        margin-left: 20px;
+                    }
+            }
+            .session{
+               h5{
+                margin-left: 13px;
+               }
+            }
+           }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1400px){
+    .Monthly{
+        text-align: center;
+        display: flex;
+        // justify-content: start;
+        padding: 40px 0px;
+        background-color: aliceblue;
+        .tag{
+            background-color: #fccc08;
+            position: absolute;
+            top: 2px;
+            padding: 12px;
+            left: 8%;
+            border-radius: .5rem;
+        }
+        .sub_Monthly{
+            display: flex;
+            // justify-content: center;
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+            background: #0b2f90;
+            z-index: 99;
+            border-radius: 2rem;
+            .Monthly_top{
+                background: #6053c9;
+                z-index: 9999;
+                border-radius: 2rem;
+                width: 100%;
+                height: auto;
+                align-items: center;
+                ul{
+                    display: flex;
+                    .navlink{
+                        list-style: none;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: 800;
+                        margin: 2rem 0 0 3rem;
+                        background-color: #0b2e9000;
+                        padding: 10px 20px;
+                        border-radius: 2rem;
+                        &:hover{
+                            background-color: #0b2f90;
+                            padding: 10px 20px;
+                            border-radius: 2rem;
+        
+                        }
+                    }
+                  li{
+                    list-style: none;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 800;
+                    margin: 2rem 0 0 3rem;
+                    background-color: #0b2e9000;
+                    padding: 10px 20px;
+                    border-radius: 2rem;
+                    &:hover{
+                        background-color: #0b2f90;
+                        padding: 10px 20px;
+                        border-radius: 2rem;
+    
+                    }
+                  }
+                }
+              .select{
+                display: flex;
+    
+                .form{
+                    left:10%;
+                    top:35%;
+                  }
+               
+              }
+                 
+            }
+            .Monthly_bottom{
+                display: flex;
+                color: white;
+                margin: 2rem;
+              justify-content: space-between;
+              flex-direction: row;
+              
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                    }
+                    .btn{
+                        background-color: #fccc08;
+                        padding: 15px 20px;
+                        border-radius: 1.5rem;
+                        width: 10rem;
+                        font-weight: 600;
+                        border: none;
+                    }
+                
+            }
+    
+            .monthly_footer{
+                display: flex;
+                flex-direction: column;
+                margin: 2rem;
+                color: white;
+                font-weight: 500;
+            }
+            
+            }
+           .course{
+            margin: 2rem;
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.192);
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: small;
+            .radio{
+                display: flex;
+                .month{
+                    h5{
+                        margin-right: 2rem; 
+                    }
+                }
+            }
+            .pay{
+                    color: #fccc08;
+                    font-weight: 700;
+                    s{
+                        font-size: 15px;
+                        margin-left: 3px;
+                    }
+                    small{
+                        background-color: #6053c9;
+                        color: white;
+                        font-weight: 500;
+                        padding: 2px 5px;
+                        border-radius: 5px;
+                        margin-left: 20px;
+                    }
+            }
+            .session{
+               h5{
+                margin-left: 13px;
+               }
+            }
+           }
+    }
+}
+

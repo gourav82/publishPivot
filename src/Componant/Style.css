@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Yearly {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+  background-color: aliceblue;
+}
+.Yearly .tag {
+  background-color: #fccc08;
+  position: absolute;
+  top: 2px;
+  padding: 12px;
+  left: 21%;
+  border-radius: 0.5rem;
+}
+.Yearly .sub_Yearly {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 65%;
+  background: #0b2f90;
+  z-index: 99;
+  border-radius: 2rem;
+}
+.Yearly .sub_Yearly .Yearly_top {
+  background: #6053c9;
+  z-index: 9999;
+  border-radius: 2rem;
+  width: 100%;
+  height: 500px;
+  align-items: center;
+}
+.Yearly .sub_Yearly .Yearly_top ul {
+  display: flex;
+}
+.Yearly .sub_Yearly .Yearly_top ul .navlink {
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 2rem 0 0 3rem;
+  background-color: rgba(11, 46, 144, 0);
+  padding: 10px 20px;
+  border-radius: 2rem;
+  list-style: none;
+}
+.Yearly .sub_Yearly .Yearly_top ul .navlink:hover {
+  background-color: #0b2f90;
+  padding: 10px 20px;
+  border-radius: 2rem;
+}
+.Yearly .sub_Yearly .Yearly_top ul li {
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 2rem 0 0 3rem;
+  background-color: rgba(11, 46, 144, 0);
+  padding: 10px 20px;
+  border-radius: 2rem;
+}
+.Yearly .sub_Yearly .Yearly_top ul li:hover {
+  background-color: #0b2f90;
+  padding: 10px 20px;
+  border-radius: 2rem;
+}
+.Yearly .sub_Yearly .Yearly_top .menu {
+  display: flex;
+}
+.Yearly .sub_Yearly .Yearly_top .menu .form {
+  left: 21%;
+  top: 35%;
+}
+.Yearly .sub_Yearly .Yearly_top .menu .form .selectForm {
+  color: rgb(255, 255, 255);
+}
+.Yearly .sub_Yearly .Yearly_top .menu .form .selectForm .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+  color: rgb(255, 255, 255);
+}
+.Yearly .sub_Yearly .Yearly_top .menu .form .selectForm .MuiSelect-nativeInput .css-yf8vq0-MuiSelect-nativeInput {
+  color: rgb(255, 255, 255);
+}
+.Yearly .sub_Yearly .Yearly_top .Yearly_data {
+  display: flex;
+  margin: 2rem;
+  color: white;
+}
+.Yearly .sub_Yearly .Yearly_top .Yearly_data div p {
+  padding: 10px;
+}
+.Yearly .sub_Yearly .Yearly_top .Yearly_data div h1 {
+  color: #fccc08;
+  font-weight: 1000;
+}
+.Yearly .sub_Yearly .Yearly_top .Course_heading {
+  display: flex;
+  justify-content: start;
+  color: white;
+  margin: 2rem 0 0rem 3.5rem;
+}
+.Yearly .sub_Yearly .Yearly_top .course_topic {
+  display: flex;
+}
+.Yearly .sub_Yearly .Yearly_top .course_topic div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  margin: 0 2rem;
+  padding: 20px;
+}
+.Yearly .sub_Yearly .Yearly_top .course_topic div span {
+  display: flex;
+  justify-content: flex-start;
+  color: #fccc08;
+  font-weight: 800;
+}
+.Yearly .sub_Yearly .Yearly_bottom {
+  display: flex;
+  color: white;
+  margin: 2rem;
+  justify-content: space-around;
+}
+.Yearly .sub_Yearly .Yearly_bottom div {
+  padding: 1rem;
+}
+.Yearly .sub_Yearly .Yearly_bottom div small {
+  background-color: white;
+  border-radius: 5px;
+  color: #0b2f90;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.Yearly .sub_Yearly .Yearly_bottom div h3 span {
+  color: #fccc08;
+  font-weight: 600;
+}
+.Yearly .sub_Yearly .Yearly_bottom div .btn {
+  background-color: #fccc08;
+  padding: 15px 20px;
+  border-radius: 1.5rem;
+  width: 10rem;
+  font-weight: 600;
+  border: none;
+}
+.Yearly .sub_Yearly .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem;
+  color: white;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 576px) {
+  .Yearly {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    background-color: aliceblue;
+  }
+  .Yearly .tag {
+    background-color: #fccc08;
+    position: absolute;
+    top: 2px;
+    padding: 10px;
+    left: 25%;
+    border-radius: 0.5rem;
+    width: 50%;
+  }
+  .Yearly .sub_Yearly {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background: #0b2f90;
+    z-index: 99;
+    border-radius: 2rem;
+  }
+}
+.Monthly {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+  background-color: aliceblue;
+}
+.Monthly .tag {
+  background-color: #fccc08;
+  position: absolute;
+  top: 2px;
+  padding: 12px;
+  left: 21%;
+  border-radius: 0.5rem;
+}
+.Monthly .sub_Monthly {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 65%;
+  background: #0b2f90;
+  z-index: 99;
+  border-radius: 2rem;
+}
+.Monthly .sub_Monthly .Monthly_top {
+  background: #6053c9;
+  z-index: 9999;
+  border-radius: 2rem;
+  width: 100%;
+  height: 600px;
+  align-items: center;
+}
+.Monthly .sub_Monthly .Monthly_top ul {
+  display: flex;
+}
+.Monthly .sub_Monthly .Monthly_top ul .navlink {
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 2rem 0 0 3rem;
+  background-color: rgba(11, 46, 144, 0);
+  padding: 10px 20px;
+  border-radius: 2rem;
+}
+.Monthly .sub_Monthly .Monthly_top ul .navlink:hover {
+  background-color: #0b2f90;
+  padding: 10px 20px;
+  border-radius: 2rem;
+}
+.Monthly .sub_Monthly .Monthly_top ul li {
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 2rem 0 0 3rem;
+  background-color: rgba(11, 46, 144, 0);
+  padding: 10px 20px;
+  border-radius: 2rem;
+}
+.Monthly .sub_Monthly .Monthly_top ul li:hover {
+  background-color: #0b2f90;
+  padding: 10px 20px;
+  border-radius: 2rem;
+}
+.Monthly .sub_Monthly .Monthly_top .select {
+  display: flex;
+}
+.Monthly .sub_Monthly .Monthly_top .select .form {
+  left: 21%;
+  top: 35%;
+}
+.Monthly .sub_Monthly .Monthly_top .select .form .selectForm {
+  color: rgb(255, 255, 255);
+}
+.Monthly .sub_Monthly .Monthly_top .select .form .selectForm .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+  color: rgb(255, 255, 255);
+}
+.Monthly .sub_Monthly .Monthly_top .select .form .selectForm .MuiSelect-nativeInput .css-yf8vq0-MuiSelect-nativeInput {
+  color: rgb(255, 255, 255);
+}
+.Monthly .sub_Monthly .Monthly_bottom {
+  display: flex;
+  color: white;
+  margin: 2rem;
+  justify-content: space-between;
+}
+.Monthly .sub_Monthly .Monthly_bottom div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+.Monthly .sub_Monthly .Monthly_bottom .btn {
+  background-color: #fccc08;
+  padding: 15px 20px;
+  border-radius: 1.5rem;
+  width: 10rem;
+  font-weight: 600;
+  border: none;
+}
+.Monthly .sub_Monthly .monthly_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem;
+  color: white;
+  font-weight: 500;
+}
+.Monthly .course {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.192);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+.Monthly .course .radio {
+  display: flex;
+}
+.Monthly .course .radio .month {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+.Monthly .course .pay {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  color: #fccc08;
+  font-weight: 700;
+}
+.Monthly .course .pay s {
+  font-size: 15px;
+}
+.Monthly .course .pay small {
+  background-color: #6053c9;
+  color: white;
+  font-weight: 500;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.Monthly .course .session {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}/*# sourceMappingURL=Style.css.map */
