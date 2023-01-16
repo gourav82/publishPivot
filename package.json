@@ -2,7 +2,7 @@
   "name": "rootassi",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gourav82.github.io/pivotRootAssi",
+  "homepage": "https://gourav82.github.io/publishPivot",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
