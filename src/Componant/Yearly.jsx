@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import Select from './SelectForm'
-import {Link} from 'react-router-dom'
 import './Style.scss'
 import data from '../data.json'
 import Header from './Header'
 
 const Yearly = () => {
-    const[grade, setGrade] = useState('');
+    const[grade, setGrade] = useState('Grade 6');
     const[typet, setTypet] = useState('yearly');
     const[liactive, setLiactive] = useState('CBSE');
-    const[detail, setDetail] = useState({});
+    const[detail, setDetail] = useState(data[1].yearly.find(x=>x.grade==='Grade 6'));
 
     const handleOnChange =(elem)=>{
     setGrade(elem);
         }
     const handleHeaderChange= (ele) =>{
-        setTypet(ele);
+        setTypet(ele);//
     }    
     useEffect(()=>{
         setDetail(data[1].yearly.find(x=>x.grade===grade));
@@ -69,12 +68,17 @@ const Yearly = () => {
                         <div className="course_topic">
                             { grade!=='' && detail!==undefined &&typeof detail.boards[liactive].syllabus ==='string' &&  <div>
                                 <span>Introduction</span>
-                                <p> {detail.boards[liactive].syllabus}</p>
+                                
+                                 {detail.boards[liactive].syllabus.split('!').map((elem,i)=>{
+                                    return i<=5 && <p>{elem}</p>;
+                                })}
                             </div>}
                             { grade!=='' && detail!==undefined && typeof detail.boards[liactive].syllabus === 'object' &&  
                                 
                                Object.entries(detail.boards[liactive].syllabus[0]).map(([key,value],i) =>{
-                                    return i<3 && <div> <span>{key}</span> <p>{value}</p> </div>
+                                    return i<3 && <div> <span>{key}</span> {value.split('!').map((elem,i)=>{
+                                        return i<=5 && <p>{elem}</p>;
+                                    })} </div>
                                 })
                                 
                             }

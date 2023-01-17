@@ -5,8 +5,8 @@ import data from '../data.json'
 import Header from './Header'
 
 const Monthly = () => {
-    const[grade, setGrade] = useState('');
-    const[detail, setDetail] = useState({});
+    const[grade, setGrade] = useState('Grade 6');
+    const[detail, setDetail] = useState(data[0].monthly.find(x=>x.grade==='Grade 6'));
     const[typet, setTypet] = useState('monthly');
     const[selected,setSelected] =useState('');
     const keys = {'5_sessions':'5 Sessions','10_sessions':'10 Sessions','20_sessions':'20 Sessions','45_sessions':'45 Sessions'};
@@ -47,18 +47,20 @@ const Monthly = () => {
                                             <input type="radio" name="radio_s" className='form-control' onChange={handleRadioChange} id={`radio_s${i}`} value={elem} checked={elem===selected} />
                                         </label>
                                         <div className="month">
-                                            <h3>{grade!=='' && detail!==undefined && detail.boards.general[elem].valid} </h3>
-                                            <h5>{grade!=='' && detail!==undefined && detail.boards.general[elem].refund}</h5>
+                                            <h3>{grade!=='' && detail!==undefined && 
+                                            Object.entries(detail.boards).map(([el,val],i)=>{ return i<1 && val[elem].valid})
+                                            } </h3>
+                                            <h5>{grade!=='' && detail!==undefined && Object.entries(detail.boards).map(([el,val],i)=>{ return i<1 && val[elem].refund})}</h5>
                                         </div>
                                     </div>
                                 
                                     <div className="pay">
-                                        <h2>₹ {grade!=='' && detail!==undefined && detail.boards.general[elem].price-(detail.boards.general[elem].price*detail.boards.general[elem].discount)/100} <s> ₹{grade!=='' && detail!==undefined && detail.boards.general[elem].price}</s></h2>
-                                        <small>{grade!=='' && detail!==undefined && detail.boards.general[elem].discount}% OFF</small>
+                                        <h2>₹ { grade!=='' && detail!==undefined && Object.entries(detail.boards).map(([el,val],i)=>{ return i<1 && val[elem].price - (val[elem].price*val[elem].discount)/100;})} <s> ₹{grade!=='' && detail!==undefined && Object.entries(detail.boards).map(([el,val],i)=>{ return i<1 && val[elem].price})}</s></h2>
+                                        <small>{grade!=='' && detail!==undefined && Object.entries(detail.boards).map(([el,val],i)=>{ return i<1 && val[elem].discount})}% OFF</small>
                                     </div>
                                     <div className="session">
-                                        <h4>{grade!=='' && detail!==undefined && detail.boards.general[elem].per_class_price} Per Session</h4>
-                                        <h5> {grade!=='' && detail!==undefined && value}</h5>
+                                        <h4>{grade!=='' && detail!==undefined && Object.entries(detail.boards).map(([el,val],i)=>{ return i<1 && val[elem].per_class_price})} Per Session</h4>
+                                        <h5> {grade!=='' && detail!==undefined && Object.entries(detail.boards).map(([el,val],i)=>{ return i<1 && val[elem].total_sessions})} Sessions</h5>
                                     </div>
                                 </div>
                                 })}
